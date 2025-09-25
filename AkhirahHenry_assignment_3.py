@@ -66,3 +66,23 @@ if subject in study_options:
             print("Too stressed to enjoy studying History.")
 else:
     print("Invalid subject choice. Stop wasting time.")
+
+print("\n--- End of Semester Assessment ---")
+
+if type(current_gpa) is float and type(study_hours) is int:
+    print("Stats are valid. Proceeding with with final evalutation...")
+
+    if current_gpa >= 3.5:
+        if stress_level < 50:
+            print("Ending 1: You're an honors grad with a healthy mental state and healthy academic health!")
+        else:
+            print("Ending 2: You made it out with good grades, that's all that matters. Go treat yourself with some rest or something sweet.")
+    elif 2.0 <= current_gpa < 3.5:
+        if social_points > 40:
+            print("Ending 3: Solid student life and academic balance. Your grades are just like everyone else's!")
+        else:
+            print("Ending 4: Looks like you were struggling socially, but at least you passed your classes.")
+    else:
+        print("Ending 5: Academic probation...let's go ahead and rethink about how college works so we can lock in this time.")
+else:
+    print("Stats are invalid. Simulation Error.")
