@@ -39,3 +39,30 @@ elif choice == "C":
         print("Heavy load is overwhelming with this current GPA.")
 else:
     print("Invalid choice. No changes made.")
+
+study_options = ["Programming", "Math", "English", "History"]
+
+print("\nChoose a subject to focus on: ")
+print(study_options)
+
+subject = input("Your choice: ")
+
+if subject not in study_options:
+    print(f"The subject {subject} is not in a part of {study_options}. Lock in!!")
+
+if subject in study_options:
+    if subject == "Programming" and current_gpa >= 3.0:
+        current_gpa += 0.1
+        social_points -= 5
+        print("Programming boosted your GPA but no fun for you.")
+    elif subject == "Math" or "English":
+        current_gpa += 0.05
+        print("Nice progression in your core classes.")
+    else:
+        if not stress_level > 70:
+            social_points += 10
+            print("History gave you balance and friends, hooray!")
+        else:
+            print("Too stressed to enjoy studying History.")
+else:
+    print("Invalid subject choice. Stop wasting time.")
